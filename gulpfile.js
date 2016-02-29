@@ -133,7 +133,7 @@ var jsTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    .pipe(babel())
+    //.pipe(babel())
     .pipe(concat, filename)
     .pipe(uglify, {
       compress: {
