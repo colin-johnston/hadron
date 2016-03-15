@@ -20,6 +20,7 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 var babel        = require('gulp-babel');
+var es2015       = require('babel-preset-es2015');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -93,7 +94,7 @@ var cssTasks = function(filename) {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
         precision: 10,
-        includePaths: ['.'],
+        includePaths: ['.', './bower_components/foundation-sites/scss/'],
         errLogToConsole: !enabled.failStyleTask
       }));
     })
@@ -101,9 +102,6 @@ var cssTasks = function(filename) {
     .pipe(autoprefixer, {
       browsers: [
         'last 2 versions',
-        'ie 8',
-        'ie 9',
-        'android 2.3',
         'android 4',
         'opera 12'
       ]
@@ -133,7 +131,7 @@ var jsTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    //.pipe(babel())
+    .pipe(babel)
     .pipe(concat, filename)
     .pipe(uglify, {
       compress: {

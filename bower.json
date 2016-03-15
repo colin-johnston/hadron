@@ -1,5 +1,5 @@
 {
-  "name": "sage",
+  "name": "sage-f6",
   "homepage": "https://roots.io/sage/",
   "authors": [
     "Ben Word <ben@benword.com>"
@@ -14,9 +14,23 @@
     "foundation-sites": {
       "main": [
 
-        "./assets/foundation.scss"
+        "./assets/foundation.scss",
+
+        "./js/foundation.core.js",
+        "./js/foundation.util.*.js",
+        "./js/foundation.tooltip.js"
+
+      ]
+    },
+    "motion-ui": {
+      "main": [
+        
+        "motion-ui.js"
 
       ]
     }
+  },
+  "resolutions": {
+    "jquery": "~2.2.0"
   }
 }
