@@ -19,7 +19,26 @@
 
         "./js/foundation.core.js",
         "./js/foundation.util.*.js",
-        "./js/foundation.tooltip.js"
+
+        "./js/foundation.abide.js",
+        "./js/foundation.accordion.js",
+        "./js/foundation.accordionMenu.js",
+        "./js/foundation.drilldown.js",
+        "./js/foundation.dropdown.js",
+        "./js/foundation.dropdownMenu.js",
+        "./js/foundation.equalizer.js",
+        "./js/foundation.interchange.js",
+        "./js/foundation.magellan.js",
+        "./js/foundation.offcanvas.js",
+        "./js/foundation.orbit.js",
+        "./js/foundation.responsiveMenu.js",
+        "./js/foundation.responsiveToggle.js",
+        "./js/foundation.reveal.js",
+        "./js/foundation.slider.js",
+        "./js/foundation.sticky.js",
+        "./js/foundation.tabs.js",
+        "./js/foundation.toggler.js",
+        "./js/foundation.tooltip.js",
 
       ]
     },
