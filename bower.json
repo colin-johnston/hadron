@@ -38,7 +38,7 @@
         "./js/foundation.sticky.js",
         "./js/foundation.tabs.js",
         "./js/foundation.toggler.js",
-        "./js/foundation.tooltip.js",
+        "./js/foundation.tooltip.js"
 
       ]
     },
